@@ -1,0 +1,22 @@
+{
+  "name": "task-on-worker-theards",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "DEBUG=task-on-worker-theards:* node-dev ./bin/www",
+    "prod": "node ./bin/www"
+  },
+  "dependencies": {
+    "csvtojson": "^2.0.10",
+    "debug-trace": "^2.2.3",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "loadash": "^1.0.0",
+    "lodash": "^4.17.21",
+    "mongoose": "^5.11.18",
+    "morgan": "~1.9.1",
+    "multer": "^1.4.2",
+    "node-dev": "^6.3.0",
+    "pm2": "^5.1.0",
+    "uuid": "^8.3.2"
+  }
+}

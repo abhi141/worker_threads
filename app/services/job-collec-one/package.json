@@ -1,0 +1,12 @@
+{
+    "name": "job-collec-one",
+    "version": "1.0.0",
+    "description": "user crud operations",
+    "main": "job-collec-one.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Abhishek Sreeram",
+    "license": "ISC"
+  }
+  

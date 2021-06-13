@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "b9d368ff-248c-4369-acab-cd08aabe9b20",
+		"name": "Insurance-Csv-Processing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "process-csv-with-worker",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "recfile",
+							"type": "file",
+							"src": "/home/eunimart/Downloads/data-sheet.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{local}}/api/v1/process_csv_worker",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"process_csv_worker"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-policy-info-by-user-name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/api/v1/get_policy_info?user_name=Lura Lucca",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"get_policy_info"
+					],
+					"query": [
+						{
+							"key": "user_name",
+							"value": "Lura Lucca"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "policy-info-aggreagate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/api/v1/get_policy_info_aggreate",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"get_policy_info_aggreate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "process-csv",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "recfile",
+							"type": "file",
+							"src": "/home/eunimart/Downloads/data-sheet.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{local}}/api/v1/process_csv",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"process_csv"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "message-transfer-from-collec-collecone",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/api/v1/get_jobs",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"get_jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-alert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"time_of_alert\" : \"2021-06-12T10:50:47Z\",\n    \"alert_message\":\"hello\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}/api/v1/create_alert",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"create_alert"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
